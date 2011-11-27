@@ -1,9 +1,12 @@
-Symfony Standard Edition
-========================
+Symfony Standard Edition with HAML
+==================================
 
-Welcome to the Symfony Standard Edition - a fully-functional Symfony2
+Welcome to the Symfony Standard Edition with HAML - a fully-functional Symfony2
 application that you can use as the skeleton for your new app. If you want
 to learn more about the features included, see the "What's Inside?" section.
+
+This version of Symfony Standard comes with HAML support pre-configured and
+AcmeDemoBundle's Twig templates converted to HAML.
 
 This document contains information on how to download and start using Symfony.
 For a more detailed explanation, see the
@@ -32,8 +35,8 @@ But if you still want to use Git, you are on your own.
 
 Run the following commands:
 
-    git clone http://github.com/symfony/symfony-standard.git
-    cd symfony-standard
+    git clone http://github.com/arnaud-lb/symfony-standard-haml.git
+    cd symfony-standard-haml
     rm -rf .git
 
 2) Installation
@@ -103,7 +106,7 @@ you'll need to make a few changes before using it to build your application.
 
 The distribution is configured with the following defaults:
 
-* Twig is the only configured template engine;
+* HAML and Twig are the only configured template engines;
 * Doctrine ORM/DBAL is configured;
 * Swiftmailer is configured;
 * Annotations for everything are enabled.
@@ -118,7 +121,7 @@ playing with it, you can remove it by following these steps:
 
 What's inside?
 ---------------
-The Symfony Standard Edition comes pre-configured with the following bundles:
+The Symfony Standard Edition with HAML comes pre-configured with the following bundles:
 	
 * **FrameworkBundle** - The core Symfony framework bundle
 * **SensioFrameworkExtraBundle** - Adds several enhancements, including template
@@ -127,6 +130,9 @@ The Symfony Standard Edition comes pre-configured with the following bundles:
   ([documentation](http://symfony.com/doc/current/book/doctrine.html))
 * **TwigBundle** - Adds support for the Twig templating engine
   ([documentation](http://symfony.com/doc/current/book/templating.html))
+* **MtHamlBundle** - Adds support for the HAML templating engine
+  ([MtHamlBundle documentation](https://github.com/arnaud-lb/MtHamlBundle#readme),
+  [MtHaml documentation](https://github.com/arnaud-lb/MtHaml#readme))
 * **SecurityBundle** - Adds security by integrating Symfony's security component
   ([documentation](http://symfony.com/doc/current/book/security.html))
 * **SwiftmailerBundle** - Adds support for Swiftmailer, a library for sending emails
