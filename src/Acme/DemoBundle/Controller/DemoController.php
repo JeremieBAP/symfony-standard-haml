@@ -14,7 +14,7 @@ class DemoController extends Controller
 {
     /**
      * @Route("/", name="_demo")
-     * @Template()
+     * @Template(engine="haml")
      */
     public function indexAction()
     {
@@ -23,7 +23,7 @@ class DemoController extends Controller
 
     /**
      * @Route("/hello/{name}", name="_demo_hello")
-     * @Template()
+     * @Template(engine="haml")
      */
     public function helloAction($name)
     {
@@ -32,7 +32,7 @@ class DemoController extends Controller
 
     /**
      * @Route("/contact", name="_demo_contact")
-     * @Template()
+     * @Template(engine="haml")
      */
     public function contactAction()
     {

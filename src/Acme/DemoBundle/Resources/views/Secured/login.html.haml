@@ -1,0 +1,23 @@
+- extends 'AcmeDemoBundle::layout.html.haml'
+
+- block content
+    %h1 Login
+
+    %p
+        Choose between two default users: <em>user/userpass</em> <small>(ROLE_USER)</small> or <em>admin/adminpass</em> <small>(ROLE_ADMIN)</small>
+
+    - if error
+        .error = error.message
+
+    %form#login(action=path("_security_check") method="post")
+        %div
+            %label(for="username") Username
+            %input#username(type="text" name="_username" value=last_username)
+
+        %div
+            %label(for="password") Password
+            %input#password(type="password" name="_password")
+
+        %input.symfony-button-grey(type="submit" value="LOGIN")
+
+- set code = code(_self)

@@ -1,0 +1,19 @@
+- extends "AcmeDemoBundle::layout.html.haml"
+
+- block title "Symfony - Demos"
+
+- block content_header ''
+
+- block content
+    %h1 Available demos
+    %ul#demo-list
+        %li
+            %a(href=path('_demo_hello', {'name': 'World'})) Hello World
+        %li
+            %a(href=path('_demo_secured_hello', {'name': 'World'})) Access the secured area
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            %a(href=path('_demo_login')) Go to the login page
+        -#
+            %li
+                %a(href=path('_demo_contact')) Send a Message
+

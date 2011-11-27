@@ -15,7 +15,7 @@ class SecuredController extends Controller
 {
     /**
      * @Route("/login", name="_demo_login")
-     * @Template()
+     * @Template(engine="haml")
      */
     public function loginAction()
     {
@@ -50,7 +50,7 @@ class SecuredController extends Controller
     /**
      * @Route("/hello", defaults={"name"="World"}),
      * @Route("/hello/{name}", name="_demo_secured_hello")
-     * @Template()
+     * @Template(engine="haml")
      */
     public function helloAction($name)
     {
@@ -60,7 +60,7 @@ class SecuredController extends Controller
     /**
      * @Route("/hello/admin/{name}", name="_demo_secured_hello_admin")
      * @Secure(roles="ROLE_ADMIN")
-     * @Template()
+     * @Template(engine="haml")
      */
     public function helloadminAction($name)
     {

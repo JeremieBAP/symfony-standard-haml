@@ -1,0 +1,65 @@
+- extends 'AcmeDemoBundle::layout.html.haml'
+
+- block title 'Symfony - Welcome'
+
+- block content_header ''
+
+- block content
+    %h1 Welcome!
+
+    %p Congratulations! You have successfully installed a new Symfony application.
+
+    .symfony-blocks-welcome
+
+        .block-quick-tour
+            .illustration
+                %img(src=asset('bundles/acmedemo/images/welcome-quick-tour.gif') alt="Quick tour")
+            %a.symfony-button-green(href="http://symfony.com/doc/current/quick_tour/index.html") Read the Quick Tour
+
+        - if app.environment == 'dev'
+            .block-configure
+                .illustration
+                    %img(src=asset('bundles/acmedemo/images/welcome-configure.gif') alt="Configure your appication")
+                %a.symfony-button-green(href=path('_configurator_home')) Configure
+        .block-demo
+            .illustration
+                %img(src=asset('bundles/acmedemo/images/welcome-demo.gif') alt="Demo")
+            %a.symfony-button-green(href=path('_demo')) Run The Demo
+
+    .symfony-blocks-help
+
+        .block-documentation
+            %ul
+                %li
+                    %strong Documentation
+                %li
+                    %a(href="http://symfony.com/doc/current/book/index.html") The book
+                %li
+                    %a(href="http://symfony.com/doc/current/cookbook/index.html") The cookbook
+                %li
+                    %a(href="http://symfony.com/doc/current/glossary.html") Glossary
+
+        .block-documentation-more
+            %ul
+                %li &nbsp;
+                %li
+                    %a(href="http://symfony.com/doc/current/contributing/index.html") Contributing
+                %li
+                    %a(href="http://trainings.sensiolabs.com") Trainings
+                %li
+                    %a(href="http://books.sensiolabs.com") Books
+
+        .block-community
+            %ul
+                %li
+                    %strong Community
+                %li
+                    %a(href="http://symfony.com/irc") IRC channel
+                %li
+                    %a(href="http://symfony.com/mailing-lists") Mailing lists
+                %li
+                    %a(href="http://forum.symfony-project.org") Forum
+                %li
+                    %a(href="http://symfony.com/doc/current/contributing/index.html") How to be involved
+                %li
+                    %a(href="http://symfony.com/doc/current/contributing/index.html") Contributing

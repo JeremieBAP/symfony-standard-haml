@@ -1,0 +1,42 @@
+!!!
+%html
+    %head
+        %meta(http-equiv="Content-Type" content="text/html; charset=utf-8")
+        %link(rel="stylesheet" href=asset('bundles/acmedemo/css/demo.css') type="text/css" media="all")
+        %title
+            - block title 'Demo Bundle'
+        %link(rel="shortcut icon" href=asset('favicon.ico'))
+    %body
+        #symfony-wrapper
+            #symfony-header
+
+                %a(href=path('_welcome'))
+                    %img(src=asset('bundles/acmedemo/images/logo.gif') alt="Symfony")
+
+                %form#symfony-search(method="GET" action="http://symfony.com/search")
+                    %label(for="symfony-search-field")
+                        %span Search on Symfony Website
+                    %input#symfony-search-field.medium_txt(name="q" type="search" placeholder="Search on Symfony website")
+
+                    %input.symfony-button-grey(type="submit" value="OK")
+
+            - if app.session.flash('notice')
+                .flash-message
+                    <em>Notice</em>:
+                    = app.session.flash('notice')
+
+            - block content_header
+                #menu
+                    - block content_header_more
+                        %li
+                            %a(href=path('_demo')) Demo Home
+
+                %div(style="clear: both")
+
+            .symfony-content
+                - block content ''
+
+            - if code is defined
+                %h2 Code behind this page
+                .symfony-content = code|raw
+
