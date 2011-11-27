@@ -57,3 +57,11 @@
     git=http://github.com/symfony/AsseticBundle.git
     target=/bundles/Symfony/Bundle/AsseticBundle
     version=v1.0.1
+
+[MtHaml]
+    git=http://github.com/arnaud-lb/MtHaml.git
+    
+[MtHamlBundle]
+    git=http://github.com/arnaud-lb/MtHamlBundle.git
+    target=/bundles/MtHamlBundle
+
